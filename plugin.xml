@@ -22,13 +22,15 @@
     <source-file src="src/android/Operation.java" target-dir="src/com/randdusing/bluetoothle" />
     <source-file src="src/android/SequentialCallbackContext.java" target-dir="src/com/randdusing/bluetoothle" />
     <config-file target="AndroidManifest.xml" parent="/manifest">
-      <uses-permission android:name="android.permission.BLUETOOTH"/>
-      <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-      <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+
       <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
       <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE"/>
-      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+      <uses-permission android:maxSdkVersion="28" android:name="android.permission.ACCESS_COARSE_LOCATION" />
+      <uses-permission android:maxSdkVersion="30" android:name="android.permission.ACCESS_FINE_LOCATION" />
+      <uses-permission android:maxSdkVersion="30" android:name="android.permission.BLUETOOTH" />
+      <uses-permission android:maxSdkVersion="30" android:name="android.permission.BLUETOOTH_ADMIN" />
+      <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation" />
+    
     </config-file>
   </platform>
   <platform name="ios">
